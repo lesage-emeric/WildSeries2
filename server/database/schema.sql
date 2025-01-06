@@ -22,21 +22,21 @@ values
 
 -- ******************
 
+CREATE TABLE category(
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100)
+);
+
 CREATE TABLE program(
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  title VARCHAR(100) NOT NULL,
+  title VARCHAR(255) NOT NULL,
   synopsis TEXT,
   poster TEXT,
   country VARCHAR(50),
   year INT(4),
+  category_id INT,
   foreign key(category_id) references category(id)
-
 );
-
-CREATE TABLE category(
-  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  name VARCHAR(100)
-)
 
 -- ***********************
 
