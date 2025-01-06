@@ -4,10 +4,13 @@ const router = express.Router();
 
 /* ************************************************************************* */
 // Define Your API Routes Here
+
+router.get("/", sayWelcome);
 /* ************************************************************************* */
 
 // Define item-related routes
 import itemActions from "./modules/item/itemActions";
+import sayWelcome from "./modules/welcome/welcome";
 
 router.get("/api/items", itemActions.browse);
 router.get("/api/items/:id", itemActions.read);
