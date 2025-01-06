@@ -5,7 +5,6 @@ const router = express.Router();
 /* ************************************************************************* */
 // Define Your API Routes Here
 
-router.get("/", sayWelcome);
 /* ************************************************************************* */
 
 // Define item-related routes
